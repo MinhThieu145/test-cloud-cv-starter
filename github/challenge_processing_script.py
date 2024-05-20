@@ -65,10 +65,11 @@ if __name__ == "__main__":
     data = {"GITHUB_REPOSITORY": GITHUB_REPOSITORY}
 
     try:
-        response = requests.post(url, data=data, headers=headers, files=file)
         print('the url trying to go to', url)
         print('the data trying to send', data)
         print('the headers trying to send', headers)
+
+        response = requests.post(url, data=data, headers=headers, files=file)
 
         if (
             response.status_code != http.HTTPStatus.OK
