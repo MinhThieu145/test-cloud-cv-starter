@@ -67,6 +67,7 @@ if __name__ == "__main__":
     try:
         response = requests.post(url, data=data, headers=headers, files=file)
         print('the url trying to go to', url)
+        print('the data trying to send', data)
 
         if (
             response.status_code != http.HTTPStatus.OK
